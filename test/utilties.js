@@ -1,6 +1,7 @@
+
 export function createPart(bodyPart){
     const li = document.createElement('li');
-    li.classListAdd('body-part');
+    li.classList.add('body-part');
     
     const pName = document.createElement('p');
     pName.classList.add('name');
@@ -22,24 +23,9 @@ export function createPart(bodyPart){
     pPrice.classList.add('price');
     pPrice.textContent = `$${bodyPart.price}.00`;
 
-
+    const button = document.createElement('button');
+    button.textContent = 'Add to Body';
+    li.append(pName, image, pDescription, pCategory, pPrice);
+    return li;
 }
 
-
-
-
-const ul = document.getElementById('part-list');
-
-for(let part of bodyParts) {
-    const li = createPart(part);
-
-    ul.append(li);
-}
-
-
-
-const p = document.createElement('p');
-p.classList.add('name');
-
-const image = document.createElement('image');
-image.src = ;
