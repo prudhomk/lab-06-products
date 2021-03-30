@@ -1,5 +1,7 @@
-export function createItem(){
-
+export function createPart(bodyPart){
+    const li = document.createElement('li');
+    li.classListAdd('body-part');
+    
 }
 
 
@@ -13,9 +15,7 @@ for(let part of bodyParts) {
     ul.append(li);
 }
 
-const li = document.createElement('li');
-li.classListAdd('bodyPart');
-li.style.background = 'purple';
+
 
 const p = document.createElement('p');
 p.classList.add('name');

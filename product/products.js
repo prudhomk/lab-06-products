@@ -1,9 +1,9 @@
-const bodyPart = [
+export const bodyPart = [
 
     { 
         name: 'Ear',
-        image: src='../assets/ear.jpg',
-        description: 'Hearing Implement',
+        image: '../assets/ear.jpg',
+        description: 'Hearing/Balance Implement',
         category: 'Outer Part',
         price: 10,
     },
@@ -11,7 +11,7 @@ const bodyPart = [
     { 
         name: 'Eye',
         image: '../assets/human-eye.jpg',
-        description: 'Hearing Implement',
+        description: 'Seeing things!',
         category: 'Outer Part',
         price: 25,
     },
@@ -19,7 +19,7 @@ const bodyPart = [
     { 
         name: 'Nose',
         image: '../assets/nose.jpg',
-        description: 'Hearing Implement',
+        description: 'Sniff with this!',
         category: 'Outer Part',
         price: 5,
     },
@@ -27,7 +27,7 @@ const bodyPart = [
     { 
         name: 'Hand',
         image: '../assets/hand.jpg',
-        description: 'Hearing Implement',
+        description: 'Counting/Pointing/Picking Tool',
         category: 'Outer Part',
         price: 40,
     },
@@ -35,7 +35,7 @@ const bodyPart = [
     { 
         name: 'Foot',
         image: '../assets/foot.jpg',
-        description: 'Hearing Implement',
+        description: 'Mobilitiy Attachment',
         category: 'Outer Part',
         price: 50,
     },
