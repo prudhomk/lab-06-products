@@ -7,3 +7,25 @@
 5) Is there some state we need to initialize?
 6) Find all the 'events' (user clicks, form submit, etc) in your app. Ask one by one, "What happens when" for each of these events.
 7) Think about how to validate each of your steps
+
+
+Make A list of things
+
+Make objects for each item:
+make an array with multiple objects
+Each item needs: name, image, description, category, price
+
+Make hard code ID in html with list
+
+Think about dynamic structure
+
+Create html items dynamically in JS
+
+import items 
+
+create function to make li
+
+import function to tie it all together 
+
+
+stretch: TDD
