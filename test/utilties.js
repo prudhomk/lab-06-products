@@ -7,9 +7,10 @@ export function createPart(bodyPart){
     pName.classList.add('name');
     pName.textContent = bodyPart.name;
 
-    const image = document.createElement('image');
+    const image = document.createElement('img');
     image.classList.add('image');
     image.src = bodyPart.image;
+    console.log(image.src);
 
     const pDescription = document.createElement('p');
     pDescription.classList.add('description');
