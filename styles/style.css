@@ -50,12 +50,18 @@ h2 {
     font-weight: bold;
 }
 
-li {
-    display: flex;
+ul {
+    display:flex;
     flex-wrap: wrap;
 }
 
+li {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
 
 img {
     width: 200px;
+    height: 200px;
 }

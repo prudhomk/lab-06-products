@@ -1,11 +1,11 @@
 // import functions and grab DOM elements
-import { createPart } from '../test/utilties.js';
-import { bodyPart } from '../product/products.js';
+import { createItem } from '../test/utilties.js';
+import { itemShop } from '../product/products.js';
 
-const ul = document.getElementById('body-part');
+const ul = document.getElementById('item-shop');
 
-for (let part of bodyPart) {
-    const li = createPart(part);
+for (let item of itemShop) {
+    const li = createItem(item);
 
     ul.append(li);
 }
