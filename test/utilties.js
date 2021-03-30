@@ -11,7 +11,7 @@ export function createItem(itemShop){
     const image = document.createElement('img');
     image.classList.add('image');
     image.src = itemShop.image;
-    console.log(image.src);
+    
 
     const pDescription = document.createElement('p');
     pDescription.classList.add('description');
@@ -27,7 +27,9 @@ export function createItem(itemShop){
 
     const button = document.createElement('button');
     button.textContent = 'Add to Inventory';
-    li.append(pName, image, pDescription, pCategory, pPrice);
+    
+    
+    li.append(pName, image, pDescription, pCategory, pPrice, button);
     return li;
 }
 
