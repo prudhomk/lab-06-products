@@ -59,9 +59,12 @@ li {
     display: flex;
     flex-direction: column;
     margin: 10px;
+    justify-content: center;
+    text-align: center;
 }
 
 img {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 220px;
+    transform: rotate3d(90deg);
 }

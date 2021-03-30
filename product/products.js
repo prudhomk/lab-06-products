@@ -6,7 +6,7 @@ export const itemShop = [
         description: 'Protect yourself from Octoroks!',
         category: 'Weapon',
         price: 40,
-        color: 'Brown',
+        color: 'beige',
     },
 
     { 
@@ -24,22 +24,22 @@ export const itemShop = [
         description: 'Blast away rocks!',
         category: 'Weapon',
         price: 25,
-        color: 'Blue',
+        color: 'lightblue',
     },
 
     { 
         name: 'Red Potion',
         image: '../assets/red-potion.jpg',
-        description: 'Restores 10 Hearts',
+        description: 'Restores 10 Hearts.',
         category: 'Ammo',
         price: 30,
-        color: 'Red',
+        color: 'pink',
     },
 
     { 
         name: 'Boomerang',
         image: '../assets/boomerang.jpg',
-        description: 'Useful for striking out of reach switches',
+        description: 'Useful for striking out of reach switches.',
         category: 'Weapon',
         price: 50,
         color: 'Yellow',
