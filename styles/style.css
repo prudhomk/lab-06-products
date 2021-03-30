@@ -19,7 +19,7 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    background-color: beige;
 }
 
 main {
@@ -67,4 +67,9 @@ img {
     width: 250px;
     height: 220px;
     transform: rotate3d(90deg);
+}
+
+.morshu {
+    width: 400px;
+    height: 400px;
 }
