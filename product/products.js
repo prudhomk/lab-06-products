@@ -1,43 +1,48 @@
-export const bodyPart = [
+export const itemShop = [
 
     { 
-        name: 'Ear',
-        image: '../assets/ear.jpg',
-        description: 'Hearing/Balance Implement',
-        category: 'Outer Part',
-        price: 10,
-    },
-
-    { 
-        name: 'Eye',
-        image: '../assets/human-eye.jpg',
-        description: 'Seeing things!',
-        category: 'Outer Part',
-        price: 25,
-    },
-
-    { 
-        name: 'Nose',
-        image: '../assets/nose.jpg',
-        description: 'Sniff with this!',
-        category: 'Outer Part',
-        price: 5,
-    },
-
-    { 
-        name: 'Hand',
-        image: '../assets/hand.jpg',
-        description: 'Counting/Pointing/Picking Tool',
-        category: 'Outer Part',
+        name: 'Deku Shield',
+        image: '../assets/deku shield.jpg',
+        description: 'Protect yourself from Octoroks!',
+        category: 'Weapon',
         price: 40,
+        color: 'Brown',
     },
 
     { 
-        name: 'Foot',
-        image: '../assets/foot.jpg',
-        description: 'Mobilitiy Attachment',
-        category: 'Outer Part',
+        name: 'Arrows',
+        image: '../assets/arrows.png',
+        description: 'Can\'t use a bow without these!',
+        category: 'Ammo',
+        price: 20,
+        color: 'Pink',
+    },
+
+    { 
+        name: 'Bombs',
+        image: '../assets/bomb.jpg',
+        description: 'Blast away rocks!',
+        category: 'Weapon',
+        price: 25,
+        color: 'Blue',
+    },
+
+    { 
+        name: 'Red Potion',
+        image: '../assets/red-potion.jpg',
+        description: 'Restores 10 Hearts',
+        category: 'Ammo',
+        price: 30,
+        color: 'Red',
+    },
+
+    { 
+        name: 'Boomerang',
+        image: '../assets/boomerang.jpg',
+        description: 'Useful for striking out of reach switches',
+        category: 'Weapon',
         price: 50,
+        color: 'Yellow',
     },
 ];
 
