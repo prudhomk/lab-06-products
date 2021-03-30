@@ -7,6 +7,7 @@ export const itemShop = [
         category: 'Weapon',
         price: 40,
         color: 'beige',
+        id: '1',
     },
 
     { 
@@ -16,6 +17,7 @@ export const itemShop = [
         category: 'Ammo',
         price: 20,
         color: 'Pink',
+        id: '2',
     },
 
     { 
@@ -25,6 +27,7 @@ export const itemShop = [
         category: 'Weapon',
         price: 25,
         color: 'lightblue',
+        id: '3',
     },
 
     { 
@@ -34,6 +37,7 @@ export const itemShop = [
         category: 'Ammo',
         price: 30,
         color: 'pink',
+        id: '4',
     },
 
     { 
@@ -43,6 +47,7 @@ export const itemShop = [
         category: 'Weapon',
         price: 50,
         color: 'Yellow',
+        id: '5',
     },
 ];
 
