@@ -26,9 +26,13 @@ export function createItem(itemShop){
     pPrice.textContent = `${itemShop.price} rupees`;
 
     const button = document.createElement('button');
-    button.classList.add('item');
+    button.value = itemShop.id;
+    console.log(button.value);
     button.textContent = 'Add to Inventory';
     
+    button.addEventListener('click', (e) => {
+        console.log(e.target.value);
+    });
     
     li.append(pName, image, pDescription, pCategory, pPrice, button);
     return li;
