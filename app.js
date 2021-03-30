@@ -1,8 +1,11 @@
 // import functions and grab DOM elements
-const ul = document.getElementById('ul');
+import { createPart } from '../test/utilties.js';
+import { bodyPart } from '../product/products.js';
 
-// initialize state
+const ul = document.getElementById('body-part');
 
-// set event listeners to update state and DOM
+for (let part of bodyPart) {
+    const li = createPart(part);
 
-ul.append(li);
+    ul.append(li);
+}
