@@ -26,6 +26,7 @@ export function createItem(itemShop){
     pPrice.textContent = `${itemShop.price} rupees`;
 
     const button = document.createElement('button');
+    button.classList.add('item');
     button.textContent = 'Add to Inventory';
     
     
