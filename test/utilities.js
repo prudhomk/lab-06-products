@@ -27,13 +27,12 @@ export function createItem(itemShop){
 
     const button = document.createElement('button');
     button.value = itemShop.id;
-    console.log(button.value);
+    console.log(itemShop.id);
     button.textContent = 'Add to Inventory';
     
-    button.addEventListener('click', (e) => {
-        console.log(e.target.value);
-    });
-    
+    //button.addEventListener('click', (e) => {
+    //});
+    console.log(pName, image, pDescription, pCategory, pPrice, button);
     li.append(pName, image, pDescription, pCategory, pPrice, button);
     return li;
 }
@@ -44,7 +43,14 @@ export function createTableRow(cartList, itemShop) {
     const tdName = document.createElement('td');
     tdName.textContent = itemShop.name;
 
-    tdPrice.textContent = `$${itemShop.price * cartList.quantity}.00`
+    const tdQuantity = document.createElement('td');
+    tdQuantity.textContent = cartList.quantity;
+    
+    const tdPrice = document.createElement('td');
+    tdPrice.textContent = `$${itemShop.price * cartList.quantity}.00`;
+
+    tr.append(tdName, tdQuantity, tdPrice);
+    return tr;
 }
 
 
@@ -54,4 +60,5 @@ export function findById(array, id) {
         if (item.id === id) {
             return item;
         }
+    
 }
