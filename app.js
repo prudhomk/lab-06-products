@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import { createItem } from './test/utilties.js';
+import { createItem } from './test/utilities.js';
 import { itemShop } from './product/products.js';
 
 const ul = document.getElementById('item-shop');
