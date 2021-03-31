@@ -47,15 +47,25 @@ export function createTableRow(cartList, itemShop) {
     tdQuantity.textContent = cartList.quantity;
     
     const tdPrice = document.createElement('td');
-    tdPrice.textContent = `$${itemShop.price * cartList.quantity}.00`;
-
-    const totalRow = createTableRow(cartList, itemShop);
-    totalRow.textContent = 
+    tdPrice.textContent = `${calcItemTotal(cartList.quantity, itemShop.price)} Rupees`;
 
     tr.append(tdName, tdQuantity, tdPrice);
     return tr;
 }
 
+export function createTotalRow(cartList) {
+    
+    const tr = document.createElement('tr');
+
+    const td1 = document.createElement('td');
+    const td2 = document.createElement('td');
+    const td3 = document.createElement('td');
+
+    td3.textContent = `${calcOrderTotal(cartList)} Rupees.`;
+
+    tr.append(td1, td2, td3);
+    return tr;
+}
 
 
 export function findById(array, id) {
@@ -66,19 +76,7 @@ export function findById(array, id) {
     
 }
 
-//export function createTotalRow(cartList, itemShop) {
-//    
-//    const tr = document.createElement('tr');
-//
-//    const td1 = document.createElement('td');
-//    const td2 = document.createElement('td');
-//    const td3 = document.createElement('td');
-//
-//    td3.textContent = `${0} Rupees.`;
-//
-//    tr.append(td1, td2, td3);
-//    return tr;
-//}
+
 
 export function calcOrderTotal(cartList) {
     let total = 0;
