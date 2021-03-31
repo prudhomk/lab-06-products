@@ -73,3 +73,12 @@ img {
     width: 400px;
     height: 400px;
 }
+
+table {
+    width: 100%;
+    border: solid 1px black;
+}
+
+td {
+    border: dotted 1px black;
+}
