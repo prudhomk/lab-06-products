@@ -38,3 +38,20 @@ export function createItem(itemShop){
     return li;
 }
 
+export function createTableRow(cartList, itemShop) {
+    const tr = document.createElement('tr');
+
+    const tdName = document.createElement('td');
+    tdName.textContent = itemShop.name;
+
+    tdPrice.textContent = `$${itemShop.price * cartList.quantity}.00`
+}
+
+
+
+export function findById(array, id) {
+    for (let item of array) 
+        if (item.id === id) {
+            return item;
+        }
+}
