@@ -1,5 +1,5 @@
 // IMPORT MODULES under test here:
-import { createItem, findById, calcOrderTotal, calcItemTotal } from './utilities.js';
+import { createItem, findById, calcOrderTotal, calcItemTotal, createTableRow } from './utilities.js';
 import { itemShop } from '../product/products.js';
 import { cartList } from '../cart/cart.js';
 const test = QUnit.test;
@@ -24,12 +24,14 @@ test('Takes in an item object and returns a li element', (expect) => {
     expect.equal(actual.outerHTML, expected);
 });
 
-//test('Takes in a cart and returns a table element', (expect) => {
-//    const expected = 
-//
-//    const actual = 
-//
-//});
+test('Takes in a cart and returns a table row', (expect) => {
+    const expected = `<tr><td>Bombs</td><td>2</td><td>50 Rupees</td></tr>`;
+
+    const actual = createTableRow(cartList[2], itemShop[2]);
+
+    expect.equal(actual.outerHTML, expected);
+
+});
 
 test('Takes an array and returns an item by matching ID', (expect) => {
 
