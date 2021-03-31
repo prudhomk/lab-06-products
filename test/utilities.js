@@ -1,3 +1,5 @@
+import { itemShop } from '../product/products.js';
+//import { cartList } from '../cart/cart.js';
 
 export function createItem(itemShop){
     const li = document.createElement('li');
@@ -27,12 +29,10 @@ export function createItem(itemShop){
 
     const button = document.createElement('button');
     button.value = itemShop.id;
-    console.log(itemShop.id);
     button.textContent = 'Add to Inventory';
     
     //button.addEventListener('click', (e) => {
     //});
-    console.log(pName, image, pDescription, pCategory, pPrice, button);
     li.append(pName, image, pDescription, pCategory, pPrice, button);
     return li;
 }
@@ -49,6 +49,9 @@ export function createTableRow(cartList, itemShop) {
     const tdPrice = document.createElement('td');
     tdPrice.textContent = `$${itemShop.price * cartList.quantity}.00`;
 
+    const totalRow = createTableRow(cartList, itemShop);
+    totalRow.textContent = 
+
     tr.append(tdName, tdQuantity, tdPrice);
     return tr;
 }
@@ -61,4 +64,42 @@ export function findById(array, id) {
             return item;
         }
     
+}
+
+//export function createTotalRow(cartList, itemShop) {
+//    
+//    const tr = document.createElement('tr');
+//
+//    const td1 = document.createElement('td');
+//    const td2 = document.createElement('td');
+//    const td3 = document.createElement('td');
+//
+//    td3.textContent = `${0} Rupees.`;
+//
+//    tr.append(td1, td2, td3);
+//    return tr;
+//}
+
+export function calcOrderTotal(cartList) {
+    let total = 0;
+    
+    for (let i = 0; i < cartList.length; i++) {
+        const cartItem = cartList[i];
+        //console.log(cartItem);
+        const cartObject = findById(itemShop, cartItem.id);
+        //console.log(cartObject);
+        const totalItem = cartItem.quantity * cartObject.price;
+        console.log(totalItem);
+        total += totalItem;
+        //console.log(total);
+    }
+    
+    return total;
+    
+}
+
+
+export function calcItemTotal(quantity, price) {
+    let total = quantity * price;
+    return total;
 }
