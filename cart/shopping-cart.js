@@ -1,10 +1,13 @@
 import { cartList } from './cart.js';
 import { itemShop } from '../product/products.js';
 import { findById, createTableRow, createTotalRow } from '../test/utilities.js';
+import { getCart } from '../local-storage/storage-utils.js';
 
 const table = document.querySelector('table');
+const button = document.getElementById('button');
+const cart = getCart();
 
-for (let cartItem of cartList) {
+for (let cartItem of cart) {
     const matchedItem = findById(itemShop, cartItem.id);
     console.log(matchedItem);
     const tr = createTableRow(cartItem, matchedItem);
@@ -14,3 +17,10 @@ for (let cartItem of cartList) {
 
 const totalRow = createTotalRow(cartList, itemShop);
 table.append(totalRow);
+
+button.addEventListener('click', () => {
+    const cart = getCart();
+    alert (JSON.stringify(cart));
+    localStorage.clear();
+    window.location = '/';
+});
