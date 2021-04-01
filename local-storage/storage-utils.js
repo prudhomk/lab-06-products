@@ -1,5 +1,5 @@
 import { findById } from '../test/utilities.js';
-
+import { itemShop } from '../test/utilities.js';
 
 export function getCart() {
     const storedCart = localStorage.getItem('CART');
@@ -22,7 +22,7 @@ export function addItemToCart(itemId) {
     const cart = getCart();
     const itemMatch = findById(cart, itemId);
     if (itemMatch) {
-        itemMatch.quantity++;
+        itemMatch.quantity = itemShop.select.option.textContent;
     } else {
         const newItem = {
             id: itemId,

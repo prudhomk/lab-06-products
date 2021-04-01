@@ -20,7 +20,7 @@ table.append(totalRow);
 
 button.addEventListener('click', () => {
     const cart = getCart();
-    alert (JSON.stringify(cart));
+    alert (JSON.stringify(cart, null, 2));
     localStorage.clear();
     window.location = '/';
 });

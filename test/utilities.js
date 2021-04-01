@@ -31,6 +31,25 @@ export function createItem(itemShop){
     pPrice.classList.add('price');
     pPrice.textContent = `${itemShop.price} rupees`;
 
+    const select = document.createElement('select');
+    select.classList.add('select');
+    select.textContent = 'Select a Quantity:';
+    const option1 = document.createElement('option');
+    option1.textContent = 1;
+    const option2 = document.createElement('option');
+    option2.textContent = 2;
+    const option3 = document.createElement('option');
+    option3.textContent = 3;
+    const option4 = document.createElement('option');
+    option4.textContent = 4;
+    const option5 = document.createElement('option');
+    option5.textContent = 5;
+
+    select.addEventListener('click', () => {
+        
+        addItemToCart(itemShop.id);
+    });
+
     const button = document.createElement('button');
     button.value = itemShop.id;
     button.textContent = 'Add to Inventory';
