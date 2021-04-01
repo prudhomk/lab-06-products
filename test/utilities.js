@@ -1,8 +1,9 @@
 import { itemShop } from '../product/products.js';
+import { addItemToCart } from '../local-storage/storage-utils.js';
 //import { cartList } from '../cart/cart.js';
 
-const CART = 'CART';
-const cart = getCart();
+
+
 
 export function createItem(itemShop){
     const li = document.createElement('li');
@@ -34,8 +35,9 @@ export function createItem(itemShop){
     button.value = itemShop.id;
     button.textContent = 'Add to Inventory';
     
-    //button.addEventListener('click', (e) => {
-    //});
+    button.addEventListener('click', () => {
+        addItemToCart(itemShop.id);
+    });
     li.append(pName, image, pDescription, pCategory, pPrice, button);
     return li;
 }

@@ -14,7 +14,7 @@ export function getCart() {
 
 export function setCart(receivedCart) {
     const storedCart = JSON.stringify(receivedCart);
-    localStorage.setITem('CART', storedCart);
+    localStorage.setItem('CART', storedCart);
 
 }
 
