@@ -1,6 +1,9 @@
 import { itemShop } from '../product/products.js';
 //import { cartList } from '../cart/cart.js';
 
+const CART = 'CART';
+const cart = getCart();
+
 export function createItem(itemShop){
     const li = document.createElement('li');
     li.classList.add('item-shop');
