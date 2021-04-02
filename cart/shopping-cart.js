@@ -1,4 +1,4 @@
-import { cartList } from './cart.js';
+
 import { itemShop } from '../product/products.js';
 import { findById, createTableRow, createTotalRow } from '../test/utilities.js';
 import { getCart } from '../local-storage/storage-utils.js';
@@ -15,7 +15,7 @@ for (let cartItem of cart) {
     table.append(tr);
 }
 
-const totalRow = createTotalRow(cartList, itemShop);
+const totalRow = createTotalRow(cart, itemShop);
 table.append(totalRow);
 
 button.addEventListener('click', () => {
