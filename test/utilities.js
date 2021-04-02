@@ -30,26 +30,27 @@ export function createItem(itemShop){
     const pPrice = document.createElement('p');
     pPrice.classList.add('price');
     pPrice.textContent = `${itemShop.price} rupees`;
+    
 
     const select = document.createElement('select');
-    select.classList.add('select');
-    select.textContent = 'Select a Quantity:';
-    const option1 = document.createElement('option');
-    option1.textContent = 1;
-    const option2 = document.createElement('option');
-    option2.textContent = 2;
-    const option3 = document.createElement('option');
-    option3.textContent = 3;
-    const option4 = document.createElement('option');
-    option4.textContent = 4;
-    const option5 = document.createElement('option');
-    option5.textContent = 5;
-
-    select.addEventListener('click', () => {
-        
-        addItemToCart(itemShop.id);
+    //select.classList.add('select');
+    //select.text = 'Select a Quantity:';
+    //const option1 = document.createElement('option');
+    //option1.textContent = 1;
+    //
+    //
+    const options = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    for (let i = 0; i < options.length; i++) {
+        const optionX = document.createElement('option');
+        optionX.textContent = options[i];
+        optionX.value = options[i];
+        select.append(optionX);
+    }
+    select.addEventListener('change', (e) => {
+        e.target.value;
+        //console.log(e.target.value);
     });
-
+//
     const button = document.createElement('button');
     button.value = itemShop.id;
     button.textContent = 'Add to Inventory';
@@ -57,7 +58,7 @@ export function createItem(itemShop){
     button.addEventListener('click', () => {
         addItemToCart(itemShop.id);
     });
-    li.append(pName, image, pDescription, pCategory, pPrice, button);
+    li.append(pName, image, pDescription, pCategory, pPrice, select, button);
     return li;
 }
 

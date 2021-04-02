@@ -1,5 +1,6 @@
 import { findById } from '../test/utilities.js';
-import { itemShop } from '../test/utilities.js';
+import { createItem } from '../test/utilities.js';
+import { itemShop } from '../product/products.js';
 
 export function getCart() {
     const storedCart = localStorage.getItem('CART');
@@ -18,15 +19,14 @@ export function setCart(receivedCart) {
 
 }
 
+const createItem(itemShop).select.e.target.value
 export function addItemToCart(itemId) {
     const cart = getCart();
     const itemMatch = findById(cart, itemId);
     if (itemMatch) {
-        itemMatch.quantity = itemShop.select.option.textContent;
-    } else {
         const newItem = {
             id: itemId,
-            quantity: 1
+            quantity: `${e.target.value}`
         };
         cart.push(newItem);
     }
