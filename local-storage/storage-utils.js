@@ -22,7 +22,7 @@ export function addItemToCart(itemId, quantity) {
     const cart = getCart();
     const itemMatch = findById(cart, itemId);
     if (itemMatch) {
-        itemMatch.quantity = Number(quantity);
+        itemMatch.quantity += Number(quantity);
     } else {
         const newItem = {
             id: itemId,
