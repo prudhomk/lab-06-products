@@ -34,7 +34,7 @@ export function createItem(itemShop){
     const pSelect = document.createElement('p');
     pSelect.textContent = 'Select a Quantity:';
     const select = document.createElement('select');
-    const options = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    const options = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     for (let i = 0; i < options.length; i++) {
         const optionX = document.createElement('option');
         optionX.textContent = options[i];
@@ -42,9 +42,8 @@ export function createItem(itemShop){
         select.append(optionX);
     }
 
-    select.addEventListener('change', (e) => {
-        if (e.target.value === 0) button.disabled = true;
-        else button.value.disabled = false;
+    select.addEventListener('change', () => {
+        
     });
 //
     const button = document.createElement('button');
