@@ -31,14 +31,9 @@ export function createItem(itemShop){
     pPrice.classList.add('price');
     pPrice.textContent = `${itemShop.price} rupees`;
     
-
+    const pSelect = document.createElement('p');
+    pSelect.textContent = 'Select a Quantity:';
     const select = document.createElement('select');
-    //select.classList.add('select');
-    //select.text = 'Select a Quantity:';
-    //const option1 = document.createElement('option');
-    //option1.textContent = 1;
-    //
-    //
     const options = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     for (let i = 0; i < options.length; i++) {
         const optionX = document.createElement('option');
@@ -72,7 +67,7 @@ export function createItem(itemShop){
     button.addEventListener('click', () => {
         addItemToCart(itemShop.id);
     });
-    li.append(pName, image, pDescription, pCategory, pPrice, select, button);
+    li.append(pName, image, pDescription, pCategory, pPrice, pSelect, select, button);
     return li;
 }
 
