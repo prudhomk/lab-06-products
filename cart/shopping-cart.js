@@ -22,5 +22,5 @@ button.addEventListener('click', () => {
     const cart = getCart();
     alert (JSON.stringify(cart, null, 2));
     localStorage.clear();
-    window.location = '/';
+    window.location = '../index.html';
 });
