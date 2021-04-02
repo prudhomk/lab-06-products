@@ -1,5 +1,5 @@
 import { itemShop } from '../product/products.js';
-import { addItemToCart } from '../local-storage/storage-utils.js';
+import { addItemToCart, getCart, setCart } from '../local-storage/storage-utils.js';
 //import { cartList } from '../cart/cart.js';
 
 
@@ -46,9 +46,23 @@ export function createItem(itemShop){
         optionX.value = options[i];
         select.append(optionX);
     }
+
     select.addEventListener('change', (e) => {
         e.target.value;
-        //console.log(e.target.value);
+        const cart = getCart();
+        const itemMatch = findById(cart, itemShop.id);
+        if (itemMatch) {
+            itemMatch.quantity = e.target.value;
+        } else {
+            const newItem = {
+                id: itemShop.id,
+                quantity: e.target.value
+            };
+            cart.push(newItem);
+        }
+        setCart(cart);
+
+        
     });
 //
     const button = document.createElement('button');
@@ -126,3 +140,4 @@ export function calcItemTotal(quantity, price) {
     let total = quantity * price;
     return total;
 }
+
