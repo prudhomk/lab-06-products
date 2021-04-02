@@ -63,6 +63,13 @@ li {
     text-align: center;
 }
 
+select {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
 img {
     width: 250px;
     height: 220px;
