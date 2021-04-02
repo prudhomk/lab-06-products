@@ -35,7 +35,7 @@ test('retrieves cart from local storage', (expect) => {
 test('Adds an Item to the cart, displaying it in a table', (expect) => {
     
     setCart(fakeCart);
-    addItemToCart(100);
+    addItemToCart(100, 1);
     const actual = getCart();
     const expected = [{ 
         'id': 3,
