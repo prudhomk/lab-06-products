@@ -1,5 +1,5 @@
 import { itemShop } from '../product/products.js';
-import { addItemToCart, getCart, setCart } from '../local-storage/storage-utils.js';
+import { addItemToCart } from '../local-storage/storage-utils.js';
 //import { cartList } from '../cart/cart.js';
 
 
@@ -43,29 +43,18 @@ export function createItem(itemShop){
     }
 
     select.addEventListener('change', (e) => {
-        e.target.value;
-        const cart = getCart();
-        const itemMatch = findById(cart, itemShop.id);
-        if (itemMatch) {
-            itemMatch.quantity = e.target.value;
-        } else {
-            const newItem = {
-                id: itemShop.id,
-                quantity: e.target.value
-            };
-            cart.push(newItem);
-        }
-        setCart(cart);
-
-        
+        if (e.target.value === 0) button.disabled = true;
+        else button.value.disabled = false;
     });
 //
     const button = document.createElement('button');
     button.value = itemShop.id;
     button.textContent = 'Add to Inventory';
     
-    button.addEventListener('click', () => {
-        addItemToCart(itemShop.id);
+    button.addEventListener('click', (e) => {
+        const itemId = e.target.value;
+        const quantity = select.value;
+        addItemToCart(itemId, quantity);
     });
     li.append(pName, image, pDescription, pCategory, pPrice, pSelect, select, button);
     return li;

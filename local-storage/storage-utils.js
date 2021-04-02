@@ -18,15 +18,16 @@ export function setCart(receivedCart) {
 
 }
 
-export function addItemToCart(itemId) {
+export function addItemToCart(itemId, quantity) {
     const cart = getCart();
     const itemMatch = findById(cart, itemId);
     if (itemMatch) {
-        itemMatch.quantity++;
+        itemMatch.quantity = Number(quantity);
+        setCart(cart);
     } else {
         const newItem = {
             id: itemId,
-            quantity: 1
+            quantity: Number(quantity)
         };
         cart.push(newItem);
     }
